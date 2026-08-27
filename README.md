@@ -1,183 +1,127 @@
-# 🎯 Portafolio Personal
+<h1 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=28&pause=1000&color=2E9EF7&center=true&vCenter=true&width=650&lines=Hola%2C+soy+Alejandro+Cuevas+Gonz%C3%A1lez+%F0%9F%91%8B;Full+Stack+Developer+%E2%80%94+Python%2FDjango+%C2%B7+React;Backend%3A+Django+%2F+DRF+%2F+FastAPI;Fundador+%26+CTO+de+PatinPay" alt="Typing SVG" />
+</h1>
 
-Portafolio personal desarrollado con Django para mostrar habilidades, experiencia y proyectos como Full Stack Developer (Python/Django · React) e Ingeniero Industrial. Incluye secciones de información personal, habilidades técnicas, currículum, contacto y certificaciones. Está construido con una arquitectura basada en principios SOLID para mantener el código limpio y escalable.
+<p align="center">
+  <a href="https://portafolio-propio.onrender.com">
+    <img src="https://img.shields.io/badge/Portafolio-2E9EF7?style=for-the-badge&logo=firefox&logoColor=white" alt="Portafolio" />
+  </a>
+  <a href="https://patinpay.cl">
+    <img src="https://img.shields.io/badge/PatinPay-0B0B0B?style=for-the-badge&logo=ticket&logoColor=white" alt="PatinPay" />
+  </a>
+  <a href="https://www.linkedin.com/in/alejandro-cuevas-22340b124">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="mailto:alejcuevas97@gmail.com">
+    <img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email" />
+  </a>
+  <a href="https://github.com/alejcuevas97?tab=followers">
+    <img src="https://img.shields.io/github/followers/alejcuevas97?style=for-the-badge&logo=github&logoColor=white&color=333333&labelColor=333333" alt="Followers" />
+  </a>
+  <img src="https://komarev.com/ghpvc/?username=alejcuevas97&style=for-the-badge&color=2E9EF7&label=VISITAS" alt="Visitas" />
+</p>
 
-## Enlace de Portfolio
-https://portafolio-propio.onrender.com
+---
 
-## 🚀 Tecnologías Utilizadas
+## 🧑‍💻 Sobre mí
 
-- **Backend**: Django 6.0
-- **API**: Django Rest Framework (DRF) 3.17.1
-- **Autenticación**: Django REST Framework Simple JWT
-- **Frontend**: HTML y CSS propio (sistema de diseño hecho a mano, sin framework ni build)
-- **Base de Datos**: PostgreSQL o SQLite
-- **Almacenamiento de medios**: Cloudinary
-- **Despliegue**: Gunicorn, WhiteNoise
-- **Otros**: Django Environ, Pillow, django-browser-reload
+```python
+class AlejandroCuevas:
 
-## ✨ Características
+    def __init__(self):
+        self.rol        = "Full Stack Developer (enfoque backend)"
+        self.ubicacion  = "Trinidad, Cuba"  # 100% remoto
+        self.formacion  = "Ingeniero Industrial — Universidad José Martí (2025)"
+        self.actual     = "Fundador & CTO de PatinPay"
+        self.stack      = ["Python", "Django", "DRF", "FastAPI", "React", "PostgreSQL"]
+        self.idiomas    = {"es": "nativo", "en": "A2–B1 (en progreso)"}
 
-### Páginas Web
-- **Inicio**: Página de bienvenida con diseño responsivo
-- **Perfil**: Información personal del desarrollador
-- **Acerca de mí**: Formación académica y habilidades técnicas
-- **Currículum**: Descripción profesional detallada
-- **Contacto**: Información de contacto
-- **Proyectos**: Lista de proyectos con paginación
-- **Certificaciones**: Sección dinámica para mostrar certificaciones gestionadas desde el backend
+    def dia_a_dia(self):
+        return [
+            "Diseño APIs REST con Django/DRF y FastAPI",
+            "Construyo las interfaces React que las consumen",
+            "Optimizo bases de datos relacionales y despliego con CI/CD",
+        ]
 
-### Gestión de contenido
-- **Modelo `Project`**: Administra proyectos con título, descripción, imagen Cloudinary y enlace
-- **Modelo `Certification`**: Administra certificaciones con título, emisor, fecha, descripción y enlace de credencial
-- **Admin personalizado**: Panel de administración disponible en `/config/`
-
-### Internacionalización
-- Soporte para **Español** e **Inglés**
-- Cambio de idioma en el sitio por botón de navegación
-
-### Arquitectura
-- Implementación de principios SOLID (Single Responsibility, Open/Closed, Dependency Inversion, etc.)
-- Servicios separados para lógica de negocio
-- Vistas basadas en clases reutilizables
-- Serializers preparados para API REST
-- Soporte de recarga en caliente durante desarrollo con `django-browser-reload`
-
-### API REST
-- `GET /api/projects/` y `GET /api/certifications/` (solo lectura, paginados)
-- Autenticación JWT: `POST /api/auth/token/` y `POST /api/auth/token/refresh/`
-- Navegable en el navegador cuando `DEBUG=True`
-
-## 🔧 Instalación
-
-### Prerrequisitos
-- Python 3.8+
-- PostgreSQL (opcional, SQLite por defecto)
-
-### Pasos
-
-1. **Clona el repositorio:**
-   ```bash
-   git clone https://github.com/alejcuevas97/PORTAFOLIO_PROPIO.git
-   cd Portafolio
-   ```
-
-2. **Crea entorno virtual:**
-   ```bash
-   python -m venv env
-   env\Scripts\activate  # Windows
-   source env/bin/activate  # Linux/Mac
-   ```
-
-3. **Instala dependencias de Python:**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Configura variables de entorno (.env):**
-   Copia `.env.example` a `.env` en la raíz del proyecto y ajústalo. Todas las
-   variables tienen valores por defecto para desarrollo local:
-   - Sin `DATABASE_URL` → usa SQLite (`db.sqlite3`).
-   - Sin credenciales `CLOUDINARY_*` → los archivos subidos se guardan en disco local.
-
-   ```env
-   DEBUG=True
-   SECRET_KEY=tu_clave_secreta_aqui
-   # DATABASE_URL=postgresql://usuario:clave@host:5432/basedatos
-   # DATABASE_REQUIRE_SSL=True
-   # CLOUDINARY_CLOUD_NAME=tu_cloud_name
-   # CLOUDINARY_API_KEY=tu_api_key
-   # CLOUDINARY_API_SECRET=tu_api_secret
-   ```
-
-6. **Ejecuta migraciones:**
-   ```bash
-   python manage.py migrate
-   ```
-
-7. **Crea superusuario (opcional):**
-   ```bash
-   python manage.py createsuperuser
-   ```
-
-8. **Recopila archivos estáticos:**
-   ```bash
-   python manage.py collectstatic --noinput
-   ```
-
-9. **Ejecuta el servidor:**
-   ```bash
-   python manage.py runserver
-   ```
-   Accede a http://localhost:8000
-
-## 📁 Estructura del Proyecto
-
-```
-Portafolio/
-├── Portafolio/          # Configuración principal de Django
-│   ├── settings.py      # Configuraciones del proyecto
-│   ├── urls.py          # Rutas principales
-│   ├── views.py         # Vistas de páginas públicas
-│   └── serializers.py   # Serializers para API
-├── porfolio/            # App de portafolio
-│   ├── models.py        # Modelo Project y validaciones
-│   ├── views.py         # Lógica de proyectos y vistas de lista
-│   ├── forms.py         # Formularios para el frontend
-│   └── services.py      # Servicios de negocio
-├── certificado/         # App de certificaciones
-│   ├── models.py        # Modelo Certification
-│   ├── views.py         # Vista de lista de certificaciones
-│   ├── admin.py         # Registro en admin
-│   └── urls.py          # Ruta de certificaciones
-├── templates/           # Plantillas HTML
-├── static/              # Archivos estáticos
-├── media/               # Archivos multimedia
-└── requirements.txt     # Dependencias Python
+    def disponible_para(self):
+        return "roles remotos · freelance · contrato"
 ```
 
-## 🚀 Uso
+- 🚀 Actualmente llevando **PatinPay** (SaaS de venta de entradas, tienda, rifas y streaming) de cero a producción: backend, frontend, pagos y despliegue.
+- 🔧 +10 años previos resolviendo fallos complejos de hardware — de ahí mi cabeza analítica y orientada a procesos.
+- 🌱 Mejorando mi inglés técnico y profundizando en arquitectura de software y buenas prácticas (SOLID, testing, Docker).
+- 📫 Contáctame en **alejcuevas97@gmail.com**
 
-- Abrir la página principal en `/`
-- Ver proyectos en `/proyectos/`
-- Ver certificaciones en `/certificaciones/`
-- Cambiar idioma con los botones `ES`/`EN` en la navegación
-- Acceder al panel administrativo en `/config/`
-- Consumir la API en `/api/projects/` y `/api/certifications/`
-- Agregar proyectos y certificaciones desde el backend admin
+---
 
-## 🤝 Contribución
+## 🛠️ Stack & Herramientas
 
-Si deseas contribuir al proyecto:
+### Backend
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
+![DRF](https://img.shields.io/badge/DRF-A30000?style=for-the-badge&logo=django&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+![Swagger](https://img.shields.io/badge/OpenAPI-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
 
-1. Haz un fork del repositorio
-2. Crea una rama para tu feature (`git checkout -b feature/nueva-funcionalidad`)
-3. Haz commit de tus cambios (`git commit -am 'Agrega nueva funcionalidad'`)
-4. Push a la rama (`git push origin feature/nueva-funcionalidad`)
-5. Abre un Pull Request
+### Frontend
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
-## 📄 Licencia
+### Bases de datos
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)
 
-Este proyecto está bajo la Licencia ISC.
+### DevOps & Herramientas
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white)
+![Render](https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 
-## 📞 Contacto
+---
 
-- **Autor**: Alejandro Cuevas Gonzalez
-- **GitHub**: [alejcuevas97](https://github.com/alejcuevas97)
-- **Repositorio**: [PORTAFOLIO_PROPIO](https://github.com/alejcuevas97/PORTAFOLIO_PROPIO)
+## 📊 Estadísticas de GitHub
 
+<p align="center">
+  <img width="49%" src="https://github-readme-stats.vercel.app/api?username=alejcuevas97&show_icons=true&count_private=true&hide_border=true&title_color=2E9EF7&icon_color=2E9EF7&theme=tokyonight" alt="Stats" />
+  <img width="49%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=alejcuevas97&layout=compact&hide_border=true&langs_count=8&title_color=2E9EF7&theme=tokyonight" alt="Top Langs" />
+</p>
 
-<!--
-**alejcuevas97/alejcuevas97** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<p align="center">
+  <img width="60%" src="https://streak-stats.demolab.com?user=alejcuevas97&hide_border=true&theme=tokyonight&ring=2E9EF7&fire=2E9EF7&currStreakLabel=2E9EF7" alt="Streak" />
+</p>
 
-Here are some ideas to get you started:
+<p align="center">
+  <img src="https://github-profile-trophy.vercel.app/?username=alejcuevas97&theme=tokyonight&no-frame=true&column=7&margin-w=8" alt="Trophies" />
+</p>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alejcuevas97/alejcuevas97/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/alejcuevas97/alejcuevas97/output/github-snake.svg" />
+  <img alt="Snake animation" src="https://raw.githubusercontent.com/alejcuevas97/alejcuevas97/output/github-snake.svg" />
+</picture>
+
+---
+
+## 🚧 Proyectos destacados
+
+| Proyecto | Descripción | Stack |
+| --- | --- | --- |
+| **PatinPay** | Plataforma SaaS de eventos: entradas, tienda, rifas, streaming en vivo y validación por QR. API de ~70 endpoints. | Django · DRF · React · PostgreSQL · LiveKit · Transbank |
+| **Portafolio propio** | Este sitio, renderizado en servidor con Django 6 + Tailwind y una API REST de solo lectura. | Django · DRF · Tailwind · Cloudinary |
+
+<p align="center">
+  <a href="https://portafolio-propio.onrender.com"><b>→ Ver más en mi portafolio</b></a>
+</p>
+
+---
+
+<p align="center">
+  <i>"Ingeniero de formación, desarrollador por vocación."</i>
+</p>
