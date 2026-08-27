@@ -7,7 +7,7 @@
 -->
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/alejcuevas97/alejcuevas97/main/assets/header.svg" alt="Alejandro Cuevas Gonzalez - Full Stack Developer" width="880" />
+  <img src="https://raw.githubusercontent.com/alejcuevas97/alejcuevas97/main/assets/header.svg?v=2" alt="Alejandro Cuevas Gonzalez - Full Stack Developer" width="880" />
 </p>
 
 <p align="center">
