@@ -1,9 +1,7 @@
 <!--
-  ╔══════════════════════════════════════════════════════════════════╗
-  ║  README de perfil de GitHub  ·  diseno ligado al portafolio       ║
-  ║  Repo publico: github.com/alejcuevas97/alejcuevas97  ->  README.md ║
-  ║  Necesita las carpetas  assets/  y  .github/  (ver INSTRUCCIONES) ║
-  ╚══════════════════════════════════════════════════════════════════╝
+  Repo publico: github.com/alejcuevas97/alejcuevas97  ->  README.md
+  Los workflows de .github/ generan metrics.svg (main) y la serpiente (rama output).
+  Ver INSTRUCCIONES.md para editar y mantener.
 -->
 
 <h2 align="center">
