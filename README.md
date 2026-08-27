@@ -62,6 +62,10 @@ analítico y orientación a procesos.
 </p>
 
 <p align="center">
+  <img src="https://raw.githubusercontent.com/alejcuevas97/alejcuevas97/main/profile-3d-contrib/profile-season-animate.svg" alt="Calendario 3D de contribuciones" width="880" />
+</p>
+
+<p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/alejcuevas97/alejcuevas97/output/github-snake-dark.svg" />
     <img src="https://raw.githubusercontent.com/alejcuevas97/alejcuevas97/output/github-snake.svg" alt="Serpiente de contribuciones" width="880" />
